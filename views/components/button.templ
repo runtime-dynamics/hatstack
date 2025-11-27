@@ -1,0 +1,33 @@
+package components
+
+templ Button(text string, variant string, attrs templ.Attributes) {
+	if variant == "primary" {
+		<button
+			{ attrs... }
+			class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
+		>
+			{ text }
+		</button>
+	} else if variant == "secondary" {
+		<button
+			{ attrs... }
+			class="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors font-medium"
+		>
+			{ text }
+		</button>
+	} else if variant == "danger" {
+		<button
+			{ attrs... }
+			class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-medium"
+		>
+			{ text }
+		</button>
+	} else {
+		<button
+			{ attrs... }
+			class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors font-medium"
+		>
+			{ text }
+		</button>
+	}
+}

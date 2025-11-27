@@ -1,0 +1,178 @@
+package pages
+
+templ Home() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Welcome - H.A.T. Stack Application</title>
+			<script src="https://cdn.tailwindcss.com"></script>
+			<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+			<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		</head>
+		<body class="bg-gray-50 min-h-screen">
+			<!-- Navigation -->
+			<nav class="bg-white shadow-sm">
+				<div class="container mx-auto px-4 py-4">
+					<div class="flex items-center justify-between">
+						<a href="/" class="text-2xl font-bold text-gray-900">
+							H.A.T. Stack App
+						</a>
+						<div class="flex gap-6 items-center">
+							<a href="/about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+							<a href="/docs" class="text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
+							<a href="/api/health" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+								API Health
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!-- Hero Section -->
+			<section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+				<div class="container mx-auto px-4">
+					<div class="max-w-4xl mx-auto text-center">
+						<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+							Welcome to Your
+							<span class="text-blue-600">H.A.T. Stack</span>
+							Application
+						</h1>
+						<p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+							A modern Go web application built with HTMX, Alpine.js, and Templ. 
+							Featuring dual architecture for both JSON API and server-rendered HTML.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4 justify-center">
+							<a href="/docs" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium">
+								View Documentation
+							</a>
+							<a href="/api/health" class="px-8 py-3 bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 rounded-lg transition-colors font-medium">
+								Check API Health
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Tech Stack Section -->
+			<section class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+							Built with Modern Technologies
+						</h2>
+						<p class="text-lg text-gray-600">The H.A.T. Stack: HTMX, Alpine.js, and Templ</p>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+						<div class="text-center p-6 bg-gray-50 rounded-lg">
+							<div class="text-4xl font-bold text-blue-600 mb-2">HTMX</div>
+							<p class="text-gray-600">Server interactions without JavaScript</p>
+						</div>
+						<div class="text-center p-6 bg-gray-50 rounded-lg">
+							<div class="text-4xl font-bold text-indigo-600 mb-2">Alpine.js</div>
+							<p class="text-gray-600">Lightweight client-side reactivity</p>
+						</div>
+						<div class="text-center p-6 bg-gray-50 rounded-lg">
+							<div class="text-4xl font-bold text-purple-600 mb-2">Templ</div>
+							<p class="text-gray-600">Type-safe Go templates</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Features Section -->
+			<section class="py-16 bg-gray-50">
+				<div class="container mx-auto px-4">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+							Key Features
+						</h2>
+						<p class="text-lg text-gray-600">Everything you need to build modern web applications</p>
+					</div>
+					<div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+						<!-- Feature 1 -->
+						<div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+							<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold mb-2 text-gray-900">Dual Architecture</h3>
+							<p class="text-gray-600">Support for both JSON API endpoints and server-rendered HTML pages in a single application.</p>
+						</div>
+						<!-- Feature 2 -->
+						<div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+							<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold mb-2 text-gray-900">Repository Pattern</h3>
+							<p class="text-gray-600">Clean data access layer with Google Cloud Datastore integration and proper separation of concerns.</p>
+						</div>
+						<!-- Feature 3 -->
+						<div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+							<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+								<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+								</svg>
+							</div>
+							<h3 class="text-xl font-bold mb-2 text-gray-900">Type-Safe Templates</h3>
+							<p class="text-gray-600">Templ provides compile-time type safety for your HTML templates with full Go integration.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Getting Started Section -->
+			<section class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<div class="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-12 text-center">
+						<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+							Ready to Get Started?
+						</h2>
+						<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+							Explore the documentation to learn more about building with the H.A.T. Stack architecture.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4 justify-center">
+							<a href="/docs" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium">
+								Read the Docs
+							</a>
+							<a href="https://github.com" class="px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-colors font-medium">
+								View on GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<footer class="bg-gray-900 text-gray-300 py-12">
+				<div class="container mx-auto px-4">
+					<div class="grid md:grid-cols-3 gap-8 mb-8">
+						<div>
+							<h3 class="text-xl font-bold text-white mb-4">H.A.T. Stack App</h3>
+							<p class="text-gray-400 text-sm">
+								A modern Go web application built with HTMX, Alpine.js, and Templ.
+							</p>
+						</div>
+						<div>
+							<h4 class="font-bold mb-4 text-white">Resources</h4>
+							<ul class="space-y-2 text-sm">
+								<li><a href="/docs" class="text-gray-400 hover:text-blue-400 transition-colors">Documentation</a></li>
+								<li><a href="/about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
+								<li><a href="/api/health" class="text-gray-400 hover:text-blue-400 transition-colors">API Status</a></li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="font-bold mb-4 text-white">Community</h4>
+							<ul class="space-y-2 text-sm">
+								<li><a href="https://github.com" class="text-gray-400 hover:text-blue-400 transition-colors">GitHub</a></li>
+								<li><a href="/contact" class="text-gray-400 hover:text-blue-400 transition-colors">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="border-t border-gray-800 pt-8 text-center">
+						<span class="text-gray-400 text-sm">&copy; 2025 Your Company. Built with the H.A.T. Stack.</span>
+					</div>
+				</div>
+			</footer>
+		</body>
+	</html>
+}
