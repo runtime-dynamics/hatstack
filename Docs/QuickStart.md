@@ -40,7 +40,7 @@ air
 
 ## 📋 What You Need
 
-- **Go 1.23+** installed ([Download](https://golang.org/dl/))
+- **Go 1.24+** installed ([Download](https://golang.org/dl/))
 - **Google Cloud account** (for Datastore) or plan to use another database
 
 ## 🎯 What Happens During Setup

@@ -1,6 +1,6 @@
 # H.A.T. Stack Bootstrap
 
-[![Go Version](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat&logo=go)](https://golang.org)
+[![Go Version](https://img.shields.io/badge/Go-1.24+-00ADD8?style=flat&logo=go)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HTMX](https://img.shields.io/badge/HTMX-2.0-orange)](https://htmx.org)
 [![Templ](https://img.shields.io/badge/Templ-Latest-green)](https://templ.guide)
@@ -64,7 +64,7 @@ Combined with Go's performance and simplicity, the H.A.T. Stack enables rapid de
 
 ### Prerequisites
 
-- **Go 1.23 or higher** - [Download Go](https://golang.org/dl/)
+- **Go 1.24 or higher** - [Download Go](https://golang.org/dl/)
 - **Google Cloud account** - For Datastore (optional, can be replaced with another database)
 
 ### Option 1: Download Latest Release (Recommended for New Projects)
