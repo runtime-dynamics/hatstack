@@ -1,4 +1,4 @@
-﻿package app
+package app
 
 import (
 	"runtime-dynamics/views/pages"
@@ -10,5 +10,7 @@ import (
 func HomePageHandler(c *gin.Context) {
 	// Render the homepage using templ
 	component := pages.Home()
-	component.Render(c.Request.Context(), c.Writer)
+	if err := component.Render(c.Request.Context(), c.Writer); err != nil {
+		c.String(500, "Error rendering page")
+	}
 }

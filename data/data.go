@@ -1,4 +1,4 @@
-﻿package data
+package data
 
 import (
 	"context"
@@ -29,8 +29,5 @@ func Cli() *datastore.Client {
 }
 
 func IsNotFound(err error) bool {
-	if errors.Is(err, datastore.ErrNoSuchEntity) {
-		return true
-	}
-	return false
+	return errors.Is(err, datastore.ErrNoSuchEntity)
 }

@@ -98,8 +98,11 @@ func TestBaseService_ImplementsServiceInterface(t *testing.T) {
 }
 
 func TestBaseService_MultipleInstances(t *testing.T) {
-	ctx1 := context.WithValue(context.Background(), "key", "value1")
-	ctx2 := context.WithValue(context.Background(), "key", "value2")
+	type contextKey string
+	const testKey contextKey = "key"
+
+	ctx1 := context.WithValue(context.Background(), testKey, "value1")
+	ctx2 := context.WithValue(context.Background(), testKey, "value2")
 
 	service1 := NewBaseService(ctx1)
 	service2 := NewBaseService(ctx2)
@@ -110,8 +113,8 @@ func TestBaseService_MultipleInstances(t *testing.T) {
 	}
 
 	// Verify values are different
-	val1 := service1.Context().Value("key")
-	val2 := service2.Context().Value("key")
+	val1 := service1.Context().Value(testKey)
+	val2 := service2.Context().Value(testKey)
 
 	if val1 == val2 {
 		t.Error("Different service instances should have different context values")

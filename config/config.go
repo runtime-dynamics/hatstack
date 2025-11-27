@@ -1,4 +1,4 @@
-﻿package config
+package config
 
 import (
 	"encoding/base64"
@@ -40,7 +40,7 @@ func LoadConfig() error {
 	}
 	if len(config.DataStoreName) == 0 {
 		log.Info().Msg("Using 'default' datastore database")
-		strings.TrimSpace("default")
+		config.DataStoreName = "default"
 	}
 	if len(config.FrontendEndpoint) == 0 {
 		log.Info().Msg("Using [http://local.nitecon.net:8080] as frontend endpoint")

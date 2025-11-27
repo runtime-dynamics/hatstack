@@ -31,9 +31,9 @@ func TestLoadConfig(t *testing.T) {
 		{
 			name: "all env vars set",
 			envVars: map[string]string{
-				"DATASTORE_NAME":      "test-datastore",
-				"FRONTEND_ENDPOINT":   "http://test.example.com",
-				"FIREBASE_API_KEY":    "test-api-key",
+				"DATASTORE_NAME":       "test-datastore",
+				"FRONTEND_ENDPOINT":    "http://test.example.com",
+				"FIREBASE_API_KEY":     "test-api-key",
 				"FIREBASE_AUTH_DOMAIN": "test.firebaseapp.com",
 			},
 			expectedDatastore:   "test-datastore",
@@ -44,7 +44,7 @@ func TestLoadConfig(t *testing.T) {
 		{
 			name:                "no env vars set - uses defaults",
 			envVars:             map[string]string{},
-			expectedDatastore:   "",
+			expectedDatastore:   "default",
 			expectedFrontend:    "http://local.nitecon.net:8080",
 			expectedFirebaseKey: "",
 			expectedFirebaseDom: "",
