@@ -1,6 +1,6 @@
 module runtime-dynamics
 
-go 1.25
+go 1.24.0
 
 require (
 	cloud.google.com/go/datastore v1.21.0
